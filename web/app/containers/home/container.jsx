@@ -10,6 +10,7 @@ import {createPropsSelector} from 'reselect-immutable-helpers'
 // Components
 import template from '../../template'
 import PageMeta from '../../components/page-meta'
+import Banner from 'progressive-web-sdk/dist/components/banner'
 
 import {initialize} from './actions'
 
@@ -17,6 +18,7 @@ import {initialize} from './actions'
 import HomeCarousel from './partials/home-carousel'
 import HomeCategories from './partials/home-categories'
 import HomePopularProducts from './partials/home-popular-products'
+
 
 // Selectors
 import {getHomePageMeta, getHeroProducts} from './selectors'
@@ -32,16 +34,21 @@ const banners = [{
     alt: 'Books'
 }]
 
+
 const Home = ({pageMeta, products}) => {
     return (
         <div className="t-home__container">
             <PageMeta {...pageMeta} />
+            <Banner icon="info" title="info">
+                Save 20% on your order with the code SAVEBIG
+            </Banner>
             <HomeCarousel banners={banners} />
             <HomeCategories />
             { products && <HomePopularProducts products={products} /> }
         </div>
     )
 }
+
 
 Home.propTypes = {
     pageMeta: PropTypes.object,

@@ -67,6 +67,8 @@
 @import 'node_modules/progressive-web-sdk/dist/components/tabs/base';
 @import 'node_modules/progressive-web-sdk/dist/components/tile/base';
 
+@import 'node_modules/progressive-web-sdk/dist/components/banner/base';
+
 
 // [BBB] Progressive Web SDK Custom Styles
 // ---
@@ -114,3 +116,6 @@
 @import 'pw-components/tabs';
 @import 'pw-components/inline-ask';
 @import 'pw-components/tile';
+
+
+@import 'pw-components/banner';
